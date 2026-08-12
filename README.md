@@ -33,7 +33,7 @@ Breaks papers, articles, books, and technical docs into digestible chunks. After
 pi install npm:@3dalgolab/pi-interactive-reading
 
 # From git
-pi install git:github.com/3DAlgoLab/pi-interactive-reading@v1.0.0
+pi install git:github.com/3DAlgoLab/pi-interactive-reading
 
 # Local path
 pi install /path/to/pi-interactive-reading

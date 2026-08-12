@@ -37,15 +37,28 @@ Display it clearly, numbered. Set context when needed:
 ```
 If the chunk builds on something earlier, add a one-line reminder: `_Context: ..._`
 
-### 2. Ask for understanding
-Prompt: `"Try summarizing this in your own words — however rough. What's the main point here?"`
+### 2. Quiz for understanding
+Instead of an open-ended summary, ask **3–5 medium-difficulty multiple-choice questions** about this chunk. Medium means they can't be answered by word-matching — the user has to actually grasp the claim, see a consequence, or catch a subtle detail.
 
-### 3. Evaluate and expand
-- **Comprehension check:** Does the user's summary capture the core idea? Say yes/no clearly. Fill in gaps they missed.
+- **Question types to mix:**
+  - "What is the main claim / central idea of this passage?" (only one option truly captures it)
+  - "Which conclusion follows from this?" / "What does X imply?"
+  - "Why does the author say X?" (reason questions)
+  - "Which statement would the author most likely agree / disagree with?"
+  - "What would happen if this condition were different?" (counterfactual)
+- **Distractors:** Make wrong options plausible but clearly wrong — a misreading, an overreach, a detail from another chunk, or a half-truth. No obviously silly options.
+- **Format:** Number each question, give options `A) …  B) …  C) …  D) …`. Ask them one at a time or in a small batch — don't bury the reader. Let the user answer with letters or free text.
+- **Keep it focused:** 3–5 questions max, and each should test something the chunk actually said. Don't quiz trivia; quiz understanding.
+
+### 3. Evaluate answers and expand
+Go through the answers one by one:
+- **Correct:** Say so briefly, explain why the right option is right and why the tempting wrong one (if they hesitated) is a trap.
+- **Wrong:** Don't just mark it wrong. Explain the reasoning gap — what clue or idea they missed, and why their pick doesn't hold. Then guide them to the right answer rather than saying it flat out.
 - **Key concepts:** Highlight 1–3 important ideas, terms, or claims. Explain why they matter in context.
 - **Connections:** Link back to earlier chunks when relevant. `"This contradicts what they said in chunk 3 because…"`
-- **Implications:** If the chunk has non-obvious consequences, flag them. `"Notice how this assumption affects the conclusion…"
+- **Implications:** If the chunk has non-obvious consequences, flag them. `"Notice how this assumption affects the conclusion…"`
 - **Clarify ambiguity:** If the author is vague or overloaded, unpack it plainly.
+- **Wrap-up:** End with a quick "got it?" and invite the user to summarize in their own words if they want extra practice — but don't require it.
 
 ### 4. Advance
 Ask: `"Ready for the next part?"` or wait for user to say `next`, `continue`, etc.
@@ -54,6 +67,7 @@ Ask: `"Ready for the next part?"` or wait for user to say `next`, `continue`, et
 - **next / n** → move to next chunk
 - **skip** → skip this chunk, move on
 - **expand** → go deeper on this chunk (more detail, background, related concepts)
+- **explain** → skip the quiz this time; explain the chunk directly instead of testing
 - **summarize** → summarize everything covered so far in this session
 - **overview** → show a high-level outline of the remaining content
 - **back** → go back one chunk
