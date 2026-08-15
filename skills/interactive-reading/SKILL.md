@@ -47,6 +47,8 @@ Instead of an open-ended summary, ask **3–5 medium-difficulty multiple-choice 
   - "Which statement would the author most likely agree / disagree with?"
   - "What would happen if this condition were different?" (counterfactual)
 - **Distractors:** Make wrong options plausible but clearly wrong — a misreading, an overreach, a detail from another chunk, or a half-truth. No obviously silly options.
+- **No position bias:** Vary where the correct answer falls. Across the questions in one chunk, at least 3 different letters must be the correct answer, and the same letter must never be correct twice in a row.
+- **No length bias:** Keep all options at roughly the same length and level of detail. The correct answer must never be the longest or most elaborately worded option — distractors must match it, or the answer is guessable without reading.
 - **Format:** Number each question, give options `A) …  B) …  C) …  D) …`. Ask them one at a time or in a small batch — don't bury the reader. Let the user answer with letters or free text.
 - **Keep it focused:** 3–5 questions max, and each should test something the chunk actually said. Don't quiz trivia; quiz understanding.
 
