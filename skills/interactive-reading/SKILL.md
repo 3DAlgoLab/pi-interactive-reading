@@ -38,7 +38,7 @@ Display it clearly, numbered. Set context when needed:
 If the chunk builds on something earlier, add a one-line reminder: `_Context: ..._`
 
 ### 2. Quiz for understanding
-Instead of an open-ended summary, ask **3–5 medium-difficulty multiple-choice questions** about this chunk. Medium means they can't be answered by word-matching — the user has to actually grasp the claim, see a consequence, or catch a subtle detail.
+Instead of an open-ended summary, ask **1~5 medium-difficulty multiple-choice questions** about this chunk. Medium means they can't be answered by word-matching — the user has to actually grasp the claim, see a consequence, or catch a subtle detail.
 
 - **Question types to mix:**
   - "What is the main claim / central idea of this passage?" (only one option truly captures it)
