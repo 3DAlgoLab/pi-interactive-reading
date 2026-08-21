@@ -1,6 +1,6 @@
 {
   "name": "@3dalgolab/pi-interactive-reading",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Section-by-section guided reading skill for pi. Breaks documents into chunks, checks comprehension, clarifies concepts, and tracks progress.",
   "keywords": ["pi-package"],
   "license": "MIT",

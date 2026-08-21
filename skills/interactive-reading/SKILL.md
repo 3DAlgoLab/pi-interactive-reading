@@ -23,7 +23,23 @@ A patient, interactive reading companion for deep understanding of any text. Bre
    - **Books/chapters:** one logical passage (a few related sentences)
    - **Technical docs:** one concept block or code example
    - **Short text:** one sentence at a time
+   - **Spoken content (YouTube / podcast transcripts):** clean and rewrite first (see below), then one topic beat per chunk
 3. Check for `progress.json` in the same directory as the file (or project root); offer to resume from `last_chunk + 1` if found.
+
+## Spoken Content: Clean Before Chunking (YouTube / Podcasts)
+
+Raw transcripts are noisy — filler words, slang, off-topic tangents, ad reads, repeated jokes. Never chunk them raw. Run two passes instead:
+
+**Pass 1 — Clean (once, over the whole transcript):**
+- Strip filler and false starts: "um, uh, so, you know, I mean, like, yeah," mid-sentence restarts, repeated sentences.
+- Cut what is off the main topic: sponsor/ad reads, channel self-promo, audience banter, jokes, personal anecdotes that do not serve the topic.
+- Remove slang that carries no information. If a slang term or phrase is central to the topic itself, keep it and plan to explain it as a key concept.
+- For long transcripts, save the cleaned text next to `progress.json` (e.g., `<name>.cleaned.md`) so a resumed session reuses it instead of re-cleaning.
+
+**Pass 2 — Rewrite (per chunk, at display time):**
+- Rewrite each chunk as short, plain sentences — one idea per sentence — following the speaker's own structure.
+- Keep every claim, example, number, and stance from the transcript. Cut only noise. Never add facts or opinions that are not there.
+- Display the rewritten chunk in step 1 (not the raw transcript lines). If the source has timestamps (e.g., YouTube), label the chunk with its start timestamp so the user can jump to that moment.
 
 ## Session Flow
 
