@@ -24,7 +24,7 @@ A patient, interactive reading companion for deep understanding of any text. Bre
    - **Technical docs:** one concept block or code example
    - **Short text:** one sentence at a time
    - **Spoken content (YouTube / podcast transcripts):** clean and rewrite first (see below), then one topic beat per chunk
-3. Check for `progress.json` in the same directory as the file (or project root); offer to resume from `last_chunk + 1` if found.
+3. Check for a `progress_<title>_*.json` for this source in the same directory as the file (or project root); if one exists, offer to resume from its `last_chunk + 1`.
 
 ## Spoken Content: Clean Before Chunking (YouTube / Podcasts)
 
@@ -34,7 +34,7 @@ Raw transcripts are noisy — filler words, slang, off-topic tangents, ad reads,
 - Strip filler and false starts: "um, uh, so, you know, I mean, like, yeah," mid-sentence restarts, repeated sentences.
 - Cut what is off the main topic: sponsor/ad reads, channel self-promo, audience banter, jokes, personal anecdotes that do not serve the topic.
 - Remove slang that carries no information. If a slang term or phrase is central to the topic itself, keep it and plan to explain it as a key concept.
-- For long transcripts, save the cleaned text next to `progress.json` (e.g., `<name>.cleaned.md`) so a resumed session reuses it instead of re-cleaning.
+- For long transcripts, save the cleaned text next to the progress file (e.g., `<name>.cleaned.md`) so a resumed session reuses it instead of re-cleaning.
 
 **Pass 2 — Rewrite (per chunk, at display time):**
 - Rewrite each chunk as short, plain sentences — one idea per sentence — following the speaker's own structure.
@@ -94,7 +94,9 @@ Ask: `"Ready for the next part?"` or wait for user to say `next`, `continue`, et
 
 ## Progress Tracking
 
-After each session, write `progress.json` next to the source file (or in project root if URL-based):
+After each session, write progress to `progress_<title>_<date>.json` next to the source file (or in project root if URL-based):
+- `<title>`: a short sanitized slug of the source — the file name without extension for local files, or 2~4 words from the page/video title for URLs. Lowercase, hyphens, no spaces or slashes.
+- `<date>`: the session start date (`YYYY-MM-DD`), set once when the file is first created. When resuming, find the latest `progress_<title>_*.json` for that source and reuse it — never create a new file just because the date changed.
 ```json
 {
   "source": "filename or URL",
@@ -105,7 +107,7 @@ After each session, write `progress.json` next to the source file (or in project
 }
 ```
 
-When resuming, load the content and jump to `last_chunk + 1`.
+When resuming, pick the latest `progress_<title>_*.json` for that source, load the content, and jump to `last_chunk + 1`.
 
 ## Rules
 

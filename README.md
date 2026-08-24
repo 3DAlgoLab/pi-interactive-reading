@@ -10,7 +10,7 @@ Breaks papers, articles, books, and technical docs into digestible chunks. After
 
 - **Chunk-by-chunk reading** — no info overload
 - **Comprehension checks** — summarize in your own words after each section
-- **Progress tracking** — `progress.json` so you can resume where you left off
+- **Progress tracking** — `progress_<title>_<date>.json` per source, so you can resume where you left off
 - **Adaptive pacing** — shrinks chunks if you struggle, combines them if you breeze through
 - **Multi-language** — matches whatever language you respond in
 - **Spoken sources** — YouTube/podcast transcripts get cleaned of filler and off-topic noise, then rewritten as short key-point chunks
