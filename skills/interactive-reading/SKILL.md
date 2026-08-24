@@ -54,7 +54,7 @@ Display it clearly, numbered. Set context when needed:
 If the chunk builds on something earlier, add a one-line reminder: `_Context: ..._`
 
 ### 2. Quiz for understanding
-Instead of an open-ended summary, ask **1~5 medium-difficulty multiple-choice questions** about this chunk. Medium means they can't be answered by word-matching — the user has to actually grasp the claim, see a consequence, or catch a subtle detail.
+Instead of an open-ended summary, ask **1~5 medium-difficulty multiple-choice questions** about this chunk, plus **1~2 cloze (fill-in-the-blank) questions** built from the chunk's core sentences. Medium means they can't be answered by word-matching — the user has to actually grasp the claim, see a consequence, or catch a subtle detail.
 
 - **Question types to mix:**
   - "What is the main claim / central idea of this passage?" (only one option truly captures it)
@@ -62,11 +62,12 @@ Instead of an open-ended summary, ask **1~5 medium-difficulty multiple-choice qu
   - "Why does the author say X?" (reason questions)
   - "Which statement would the author most likely agree / disagree with?"
   - "What would happen if this condition were different?" (counterfactual)
+- **Cloze (fill-in-the-blank):** 1~2 per chunk. Take the chunk's core sentence (central claim or key concept) and blank out one content-critical word or phrase; the user fills the blank with their own words. Only blank words with one clear expected answer — a key term, a technical word, a causal/logical word (because, therefore, so), or a decisive number — never function words or words where many paraphrases would fit. Accept semantically equivalent answers as correct.
 - **Distractors:** Make wrong options plausible but clearly wrong — a misreading, an overreach, a detail from another chunk, or a half-truth. No obviously silly options.
 - **No position bias:** Vary where the correct answer falls. Across the questions in one chunk, at least 3 different letters must be the correct answer, and the same letter must never be correct twice in a row.
 - **No length bias:** Keep all options at roughly the same length and level of detail. The correct answer must never be the longest or most elaborately worded option — distractors must match it, or the answer is guessable without reading.
 - **Format:** Number each question, give options `A) …  B) …  C) …  D) …`. Ask them one at a time or in a small batch — don't bury the reader. Let the user answer with letters or free text.
-- **Keep it focused:** 3–5 questions max, and each should test something the chunk actually said. Don't quiz trivia; quiz understanding.
+- **Keep it focused:** 3–5 questions total per chunk (multiple-choice + cloze combined), and each should test something the chunk actually said. Don't quiz trivia; quiz understanding.
 
 ### 3. Evaluate answers and expand
 Go through the answers one by one:
