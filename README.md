@@ -22,6 +22,7 @@ Breaks papers, articles, books, and technical docs into digestible chunks. After
 | `next` / `n` | Move to next chunk |
 | `skip` | Skip current chunk |
 | `expand` | Go deeper on the current chunk |
+| `explain` | Skip the quiz this time; explain the chunk instead |
 | `summarize` | Summarize everything covered so far |
 | `overview` | Show outline of remaining content |
 | `back` | Go back one chunk |
