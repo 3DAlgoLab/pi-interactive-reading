@@ -18,12 +18,12 @@ A patient, interactive reading companion for deep understanding of any text. Bre
    - A local file path
    - A URL (fetch it first)
    - A book/paper name (search for it)
-2. Load the content and split into chunks:
+2. Load the content and split into chunks. Aim for **10~15 sentences per chunk** — a beginner-friendly size the reader can track through a quiz. Sentence count is the binding limit: if the natural unit below is larger, split it at a natural boundary (paragraph break, new claim, or new topic):
    - **Papers/articles:** one paragraph or subsection at a time
-   - **Books/chapters:** one logical passage (a few related sentences)
+   - **Books/chapters:** one logical passage
    - **Technical docs:** one concept block or code example
    - **Short text:** one sentence at a time
-   - **Spoken content (YouTube / podcast transcripts):** clean and rewrite first (see below), then one topic beat per chunk
+   - **Spoken content (YouTube / podcast transcripts):** clean and rewrite first (see below), then one topic beat per chunk (~3~5 sentences)
 3. Check for a `progress_<title>_*.json` for this source in the same directory as the file (or project root); if one exists, offer to resume from its `last_chunk + 1`.
 
 ## Spoken Content: Clean Before Chunking (YouTube / Podcasts)
@@ -114,7 +114,7 @@ When resuming, pick the latest `progress_<title>_*.json` for that source, load t
 - **One chunk at a time.** Don't dump large sections.
 - **Wait for user response.** Interactive, not lecture mode.
 - **Be honest but encouraging.** If the understanding is off, say so clearly and redirect.
-- **Adapt chunk size.** If the user struggles consistently, shrink chunks. If they breeze through, combine smaller units.
+- **Adapt chunk size.** If the user struggles consistently, shrink toward ~5 sentences. If they breeze through, combine units up to ~20 sentences.
 - **Match the user's language.** If they respond in Korean, reply in Korean (unless they're practicing English). Same for other languages.
 - **Track recurring confusions.** Note patterns — e.g., "keeps missing the distinction between X and Y" — and surface them periodically.
 - **Session length.** Target ~15 chunks per session. Adjust based on user's energy and comprehension. Around that mark, ask if they want to wrap up.
