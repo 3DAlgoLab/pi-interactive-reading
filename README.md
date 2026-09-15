@@ -8,8 +8,9 @@ Breaks papers, articles, books, and technical docs into digestible chunks. After
 
 ### Features
 
-- **Chunk-by-chunk reading** — no info overload
-- **Comprehension checks** — summarize in your own words after each section
+- **Chunk-by-chunk reading** — fine-grained chunks (under 7 sentences by default), no info overload
+- **Comprehension checks** — quizzes after each section, scaled to chunk size (1~2 questions on small chunks)
+- **Plain-language rewrite** — dense chunks (papers, dense docs) are rewritten into short plain sentences by default; original wording available on request
 - **Progress tracking** — `progress_<title>_<date>.json` per source, so you can resume where you left off
 - **Adaptive pacing** — shrinks chunks if you struggle, combines them if you breeze through
 - **Multi-language** — matches whatever language you respond in
@@ -23,6 +24,7 @@ Breaks papers, articles, books, and technical docs into digestible chunks. After
 | `skip` | Skip current chunk |
 | `expand` | Go deeper on the current chunk |
 | `explain` | Skip the quiz this time; explain the chunk instead |
+| `original` | Show the original, un-rewritten text of the current chunk |
 | `summarize` | Summarize everything covered so far |
 | `overview` | Show outline of remaining content |
 | `back` | Go back one chunk |
