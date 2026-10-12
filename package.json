@@ -1,14 +1,18 @@
 {
   "name": "@3dalgolab/pi-interactive-reading",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Section-by-section guided reading skill for pi. Breaks documents into chunks, checks comprehension, clarifies concepts, and tracks progress.",
-  "keywords": ["pi-package"],
+  "keywords": [
+    "pi-package"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/3DAlgoLab/pi-interactive-reading"
   },
   "pi": {
-    "skills": ["./skills"]
+    "skills": [
+      "./skills"
+    ]
   }
 }

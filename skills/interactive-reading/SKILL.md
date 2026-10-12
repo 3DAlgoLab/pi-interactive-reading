@@ -19,7 +19,7 @@ A patient, interactive reading companion for deep understanding of any text. Bre
    - A local file path
    - A URL (fetch it first)
    - A book/paper name (search for it)
-2. Load the content and split into chunks. Aim for **3~6 sentences per chunk — always under 7**. Sentence count is the binding limit: if the natural unit below is larger, split it at a natural boundary (paragraph break, new claim, or new topic), and keep splitting until every chunk is under 7 sentences:
+2. Load the content and split into chunks. Aim for **3~7 sentences per chunk — always under 8**. Sentence count is the binding limit: if the natural unit below is larger, split it at a natural boundary (paragraph break, new claim, or new topic), and keep splitting until every chunk is under 7 sentences:
    - **Papers/articles:** one paragraph or subsection at a time
    - **Books/chapters:** one logical passage
    - **Technical docs:** one concept block or code example
