@@ -8,7 +8,7 @@ Breaks papers, articles, books, and technical docs into digestible chunks. After
 
 ### Features
 
-- **Chunk-by-chunk reading** — fine-grained chunks (under 7 sentences by default), no info overload
+- **Chunk-by-chunk reading** — fine-grained chunks (7 sentences or fewer by default), no info overload
 - **Comprehension checks** — quizzes after each section, scaled to chunk size (1~2 questions on small chunks)
 - **Plain-language rewrite** — dense chunks (papers, dense docs) are rewritten into short plain sentences by default; original wording available on request
 - **Progress tracking** — `progress_<title>_<date>.json` per source, so you can resume where you left off
