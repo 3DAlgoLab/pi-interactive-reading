@@ -1,6 +1,6 @@
 ---
 name: "interactive-reading"
-description: "Section-by-section guided reading of any document or video — papers, articles, books, technical docs, YouTube/podcast transcripts. Check comprehension, clarify concepts, discuss implications, and track progress."
+description: "Section-by-section guided reading of any document or video — papers, articles, books, technical docs, YouTube/podcast transcripts. Each chunk gets a Q&A window before its comprehension quiz; clarifies concepts, discusses implications, and tracks progress."
 ---
 
 ## Interactive Reading Skill
@@ -61,7 +61,17 @@ If the chunk builds on something earlier, add a one-line reminder: `_Context: ..
 
 **Plain-language rewrite (default):** before showing a dense or hard-to-read chunk — academic papers above all — rewrite it for display: short, plain sentences, one idea per sentence, jargon unpacked in plain words on first use. Keep every claim, number, term, and stance from the original — rewrite only for clarity; never add or drop content. If a chunk is already short and plain, show it as-is. The original wording stays available (see `original`).
 
-### 2. Quiz for understanding
+### 2. Q&A time
+
+After showing a chunk, open a short Q&A window before testing:
+
+- Invite briefly and openly: "Any questions on this part before the quiz?"
+- Answer questions clearly and ground them in the chunk — quote the sentence that resolves the question when that helps.
+- Don't pre-teach the quiz. If a question already covers what a planned quiz item tests, swap that slot for another question of the same type and difficulty built on a different core sentence.
+- Zero questions is fine: if the reader says "no questions", `quiz`, or `n`, go straight to the quiz.
+- Q&A questions are comprehension signals: if the same concept is asked across multiple chunks, add it to `recurring_confusions` in the progress file.
+
+### 3. Quiz for understanding
 
 Instead of an open-ended summary, quiz each chunk — but **scale the question count to the chunk size**. Small chunks carry little to test; a flood of questions over-loads a tiny passage:
 
@@ -84,7 +94,7 @@ Questions are built from the chunk's core sentences. Medium means they can't be 
 - **Format:** Number each question, give options `A) …  B) …  C) …  D) …`. Ask them one at a time or in a small batch — don't bury the reader. Let the user answer with letters or free text.
 - **Keep it focused:** Each question should test something the chunk actually said. Don't quiz trivia; quiz understanding.
 
-### 3. Evaluate answers and expand
+### 4. Evaluate answers and expand
 
 Go through the answers one by one:
 
@@ -96,12 +106,13 @@ Go through the answers one by one:
 - **Clarify ambiguity:** If the author is vague or overloaded, unpack it plainly.
 - **Wrap-up:** End with a quick "got it?" and invite the user to summarize in their own words if they want extra practice — but don't require it.
 
-### 4. Advance
+### 5. Advance
 
 Ask: `"Ready for the next part?"` or wait for user to say `next`, `continue`, etc.
 
 ## Controls the user can use
 
+- **quiz** → skip Q&A time, go straight to the quiz
 - **next / n** → move to next chunk
 - **skip** → skip this chunk, move on
 - **expand** → go deeper on this chunk (more detail, background, related concepts)
@@ -137,6 +148,7 @@ When resuming, pick the latest `progress_<title>_*.json` for that source and loa
 
 - **One chunk at a time.** Don't dump large sections.
 - **Wait for user response.** Interactive, not lecture mode — the user should do most of the talking.
+- **Q&A before the quiz, always.** Let the reader resolve confusion first, then test. Zero questions is a valid answer — never gate the quiz on a question being asked.
 - **Be honest but encouraging.** If the understanding is off, say so clearly and redirect. Don't correct every minor misinterpretation — focus on the main claim first.
 - **Adapt chunk size.** The default is 7 sentences or fewer. If the user struggles consistently, shrink toward ~3 sentences and scaffold — don't rush. If they breeze through, combine units up to ~20 sentences, and scale the quiz budget up with the chunk size.
 - **Dense material:** academic papers pack dense claims — re-read a chunk twice or break it further.
